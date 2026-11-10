@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg, #ffe0eb, #fff5f7);
+  color: #8b3157;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 40px 20px;
+  max-width: 650px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 35px 20px;
+  border-radius: 25px;
+  box-shadow: 0 10px 35px #b85c7c30;
+  margin-top: 70px;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+.heart {
+  font-size: 55px;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
+}
+
+button {
+  background: #d95d85;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ad3d67;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  padding: 12px;
+  width: 90%;
+  border: 1px solid pink;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card" id="welcome">
+
+    <div class="heart">❤️</div>
+
+    <h1>Hey Birthday Girl!</h1>
+
+    <p>
+      Someone has created a little surprise
+      just for you.
+    </p>
+
+    <button onclick="startSurprise()">
+      Open Your Surprise 🎁
+    </button>
+
+  </div>
+
+
+  <div class="card hidden" id="quiz">
+
+    <h1>A Little Quiz 💗</h1>
+
+    <p>What makes a memory special?</p>
+
+    <button onclick="nextQuestion()">
+      The people in it ❤️
+    </button>
+
+    <button onclick="nextQuestion()">
+      The little moments ✨
+    </button>
+
+    <button onclick="nextQuestion()">
+      Everything together 💕
+    </button>
+
+  </div>
+
+
+  <div class="card hidden" id="message">
+
+    <div class="heart">💗</div>
+
+    <h1>Happy Birthday!</h1>
+
+    <p>
+      May your smile always shine bright.
+      May your dreams come true and your
+      days be filled with happiness.
+    </p>
+
+    <p>
+      Thank you for being a special part
+      of my life. Every memory with you
+      means a lot to me.
+    </p>
+
+    <h2>Lots of Love ❤️</h2>
+
+    <button onclick="showFinal()">
+      One Last Surprise 🎂
+    </button>
+
+  </div>
+
+
+  <div class="card hidden" id="final">
+
+    <div style="font-size:80px;">🎂</div>
+
+    <h1>Happy Birthday Princess!</h1>
+
+    <p>
+      Keep Smiling, Keep Shining.
+      You deserve all the happiness
+      in the world! ❤️
+    </p>
+
+    <h2>Made With Love 💌</h2>
+
+  </div>
+
+</div>
+
+
+<script>
+
+function startSurprise() {
+  document.getElementById("welcome").classList.add("hidden");
+  document.getElementById("quiz").classList.remove("hidden");
+}
+
+function nextQuestion() {
+  document.getElementById("quiz").classList.add("hidden");
+  document.getElementById("message").classList.remove("hidden");
+}
+
+function showFinal() {
+  document.getElementById("message").classList.add("hidden");
+  document.getElementById("final").classList.remove("hidden");
+}
+
+</script>
+
+</body>
+</html>
